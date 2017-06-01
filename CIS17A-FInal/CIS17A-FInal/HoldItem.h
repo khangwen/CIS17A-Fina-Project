@@ -1,5 +1,6 @@
 #pragma once
 #include "Item.h"
+
 class HoldItem :
 	public Item
 {
@@ -11,6 +12,9 @@ public:
 	HoldItem(std::string name, std::string description, int healAmount);
 	HoldItem(double buffMultiplier);
 
+	int getHealAmount() { return _healAmount; }
+	int getBuffAmount() { return _buffMultiplier; }
+	//
 	~HoldItem();
 };
 

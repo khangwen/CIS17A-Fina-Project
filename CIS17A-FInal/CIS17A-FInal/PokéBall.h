@@ -8,5 +8,9 @@ private:
 public:
 	PokéBall(std::string name, std::string description, double captureRate);
 	~PokéBall();
+
+	double getCaptureRate() { return _captureRate; }
+
+	//
 };
 
