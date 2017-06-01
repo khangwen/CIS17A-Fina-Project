@@ -18,5 +18,43 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PokéBall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RecoveryItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Potion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HoldItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Berry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PokéBall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RecoveryItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Potion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HoldItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Berry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

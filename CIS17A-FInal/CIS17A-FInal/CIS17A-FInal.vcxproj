@@ -139,7 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Berry.cpp" />
+    <ClCompile Include="HoldItem.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PokéBall.cpp" />
+    <ClCompile Include="Potion.cpp" />
+    <ClCompile Include="RecoveryItem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Berry.h" />
+    <ClInclude Include="HoldItem.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="PokéBall.h" />
+    <ClInclude Include="Potion.h" />
+    <ClInclude Include="RecoveryItem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

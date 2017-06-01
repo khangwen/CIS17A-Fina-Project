@@ -8,6 +8,7 @@ private:
 	std::string _name;
 	std::string _description;
 public:
+	Item();
 	Item(std::string name, std::string description);
 	~Item();
 
