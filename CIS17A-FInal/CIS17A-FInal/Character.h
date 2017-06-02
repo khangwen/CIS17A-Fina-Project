@@ -7,19 +7,19 @@
 #include "HoldItem.h"
 #include "PokéBall.h"
 #include "RecoveryItem.h"
+#include "Pokemon.h"
 
 class Character
 {
 private:
 	std::string _name;
-	int _pokédollar = 0;
+	int _pokédollar = 5000;
 	std::vector<std::shared_ptr<Berry>> _berry;
 	std::vector<std::shared_ptr<Potion>> _potion;
 	std::vector<std::shared_ptr<HoldItem>> _holdItem;
 	std::vector<std::shared_ptr<PokéBall>> _pokeBall;
 	std::vector<std::shared_ptr<RecoveryItem>> _recoveryItem;
-	//std::vector<std::shared_ptr<Berry>> _berry;
-	
+	std::vector<std::shared_ptr<Pokemon>> _pokemon;
 
 public:
 	Character(std::string name);
@@ -30,6 +30,10 @@ public:
 	void addHoldItem(std::string name, std::string description, int healAmount);
 	void addPokeBall(std::string name, std::string description, double captureRate);
 	void addRecoveryItem(std::string name, std::string description, int healAmount);
+
+	void AddPokemon(std::string name, int basehp, int baseatk, int basedef, int basespd, int level, std::string type);
+	void AddMove(std::string pokename, std::string name, std::string type, int basepower);
+	std::string GetName();
 
 	void gainPokedollar(int dollar);
 	void losePokedollar(int dollar);

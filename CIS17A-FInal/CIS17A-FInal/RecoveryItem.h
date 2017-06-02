@@ -1,10 +1,11 @@
 #pragma once
 #include "Item.h"
+#include <string>
 
 class RecoveryItem :
 	public Item
 {
-private:
+protected:
 	int _healAmount;
 public:
 	RecoveryItem(std::string name, std::string description, int healAmount);

@@ -18,22 +18,46 @@ void Character::addPotion(std::string name, std::string description, int healAmo
 
 void Character::addHoldItem(std::string name, std::string description, double buffMultiplier)
 {
-	//
+	auto holdPtr = std::make_shared<HoldItem>(name, description, buffMultiplier);
+	_holdItem.push_back(holdPtr);
 }
 
 void Character::addHoldItem(std::string name, std::string description, int healAmount)
 {
-	//
+	auto holdPtr = std::make_shared<HoldItem>(name, description, healAmount);
+	_holdItem.push_back(holdPtr);
 }
 
 void Character::addPokeBall(std::string name, std::string description, double captureRate)
 {
-	//
+	auto ballPtr = std::make_shared<PokéBall>(name, description, captureRate);
+	_pokeBall.push_back(ballPtr);
 }
 
 void Character::addRecoveryItem(std::string name, std::string description, int healAmount)
 {
-	//
+	auto recovPtr = std::make_shared<RecoveryItem>(name, description, healAmount);
+	_recoveryItem.push_back(recovPtr);
+}
+
+void Character::AddPokemon(std::string name, int basehp, int baseatk, int basedef, int basespd, int level, std::string type)
+{
+	auto pokemon = std::make_shared<Pokemon>(name, basehp, baseatk, basedef, basespd, level, type);
+	_pokemon.push_back(pokemon);
+}
+
+void Character::AddMove(std::string pokename, std::string name, std::string type, int basepower)
+{
+	for (auto pokemon : _pokemon) {
+		if (pokemon->getName() == pokename) {
+			pokemon->addMove(name, type, basepower);
+		}
+	}
+}
+
+std::string Character::GetName()
+{
+	return _name;
 }
 
 void Character::gainPokedollar(int dollar)

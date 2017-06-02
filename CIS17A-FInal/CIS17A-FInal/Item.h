@@ -4,7 +4,7 @@
 
 class Item
 {
-private:
+protected:
 	std::string _name;
 	std::string _description;
 public:
