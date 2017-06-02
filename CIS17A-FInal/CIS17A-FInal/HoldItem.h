@@ -13,7 +13,7 @@ public:
 	HoldItem(double buffMultiplier);
 
 	int getHealAmount() { return _healAmount; }
-	int getBuffAmount() { return _buffMultiplier; }
+	double getBuffAmount() { return _buffMultiplier; }
 	//
 	~HoldItem();
 };
