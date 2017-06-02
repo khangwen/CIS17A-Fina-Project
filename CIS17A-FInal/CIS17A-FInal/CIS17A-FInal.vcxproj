@@ -144,6 +144,8 @@
     <ClCompile Include="HoldItem.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Move.cpp" />
+    <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="PokéBall.cpp" />
     <ClCompile Include="Potion.cpp" />
     <ClCompile Include="RecoveryItem.cpp" />
@@ -153,6 +155,8 @@
     <ClInclude Include="Character.h" />
     <ClInclude Include="HoldItem.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Move.h" />
+    <ClInclude Include="Pokemon.h" />
     <ClInclude Include="PokéBall.h" />
     <ClInclude Include="Potion.h" />
     <ClInclude Include="RecoveryItem.h" />

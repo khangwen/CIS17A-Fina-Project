@@ -12,7 +12,7 @@ private:
 	//moves
 	std::string _type;
 public:
-	Pokemon(int hp, int atk, int def, int spd, int level);
+	Pokemon(/*int hp, int atk, int def, int spd, int level*/);
 	~Pokemon();
 };
 
