@@ -35,7 +35,7 @@ public:
 	void AddMove(std::string pokename, std::string name, std::string type, int basepower);
 	std::string GetName() { return _name; }
 	int GetDollars() { return _pokédollar; }
-	std::string UseBerry(std::string name);
+	std::string UseBerry(std::string berry);
 	//add other use later
 
 	std::string ListPokemon();

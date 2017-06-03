@@ -3,6 +3,7 @@
 #include <memory>
 #include "Character.h"
 #include <exception>
+#include "Berry.h"
 
 using namespace std;
 
@@ -174,7 +175,7 @@ void BuyItem(shared_ptr<Character> character)
 
 		switch (choice)
 		{
-		case 1: character->addBerry("Sitrus", "heal", 30, 1.5, number);
+		case 1: character->addBerry("Sitrus Berry", "heal", 30, 1.5, number);
 			character->losePokedollar(50, number);break;
 		case 2: character->addPotion("Regular Potion", "heal", 50, number);
 			character->losePokedollar(50, number);break;

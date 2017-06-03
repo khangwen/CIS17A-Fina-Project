@@ -8,3 +8,4 @@ Berry::Berry(std::string name, std::string description, int healAmount, double b
 Berry::~Berry()
 {
 }
+

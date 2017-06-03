@@ -79,15 +79,18 @@ void Character::AddMove(std::string pokename, std::string name, std::string type
 	}
 }
 
-std::string Character::UseBerry(std::string name)
+std::string Character::UseBerry(std::string berry)
 {
 	std::string output;
-
-	for (auto berry : _berry) {
-		if (berry->getName() != name)
-			output = "No berries found in your inventory";
+	
+	for (int i = 0; i < _berry.size(); i++) {
+		if (berry == _berry[i]->getName()) {
+			output = _berry[i]->UseItem();
+			_berry.erase(_berry.begin() + i);
+			i = _berry.size();
+		}
 		else 
-			output = berry->UseItem();
+			output = "No berries by that name found in your inventory\n";
 	}
 	
 	return output;
