@@ -8,7 +8,6 @@ HoldItem::HoldItem(std::string name, std::string description, int healAmount) : 
 {
 }
 
-
 HoldItem::~HoldItem()
 {
 }

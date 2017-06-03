@@ -3,7 +3,7 @@
 #include <string>
 
 class RecoveryItem :
-	public Item
+	public virtual Item
 {
 protected:
 	int _healAmount;

@@ -5,10 +5,9 @@
 class Item
 {
 protected:
-	std::string _name;
-	std::string _description;
+	std::string _name = "";
+	std::string _description = "";
 public:
-	Item();
 	Item(std::string name, std::string description);
 	~Item();
 

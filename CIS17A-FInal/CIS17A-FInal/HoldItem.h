@@ -2,7 +2,7 @@
 #include "Item.h"
 
 class HoldItem :
-	public Item
+	public virtual Item
 {
 private:
 	int _healAmount;
@@ -10,7 +10,7 @@ private:
 public:
 	HoldItem(std::string name, std::string description, double buffMultiplier);
 	HoldItem(std::string name, std::string description, int healAmount);
-
+	
 	int getHealAmount() { return _healAmount; }
 	double getBuffAmount() { return _buffMultiplier; }
 	//
