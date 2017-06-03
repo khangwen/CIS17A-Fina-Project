@@ -3,7 +3,7 @@
 #include "HoldItem.h"
 
 class Berry :
-	public RecoveryItem, public HoldItem
+	public virtual RecoveryItem, public virtual HoldItem
 {
 public:
 	Berry(std::string name, std::string description, int healAmount, double buffMultiplier);

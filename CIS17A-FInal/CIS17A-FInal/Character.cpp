@@ -4,40 +4,64 @@ Character::Character(std::string name) : _name(name)
 {
 }
 
-void Character::addBerry(std::string name, std::string description, int healAmount, double buffMultiplier)
+void Character::addBerry(std::string name, std::string description, int healAmount, double buffMultiplier, int addAmount)
 {
 	auto berryPtr = std::make_shared<Berry>(name, description, healAmount, buffMultiplier);
 	_berry.push_back(berryPtr);
+	if (addAmount > 1) {
+		addAmount--;
+		addBerry(name, description, healAmount, buffMultiplier, addAmount);
+	}
 }
 
-void Character::addPotion(std::string name, std::string description, int healAmount)
+void Character::addPotion(std::string name, std::string description, int healAmount, int addAmount)
 {
 	auto potionPtr = std::make_shared<Potion>(name, description, healAmount);
 	_potion.push_back(potionPtr);
+	if (addAmount > 1) {
+		addAmount--;
+		addPotion(name, description, healAmount, addAmount);
+	}
 }
 
-void Character::addHoldItem(std::string name, std::string description, double buffMultiplier)
+void Character::addHoldItem(std::string name, std::string description, double buffMultiplier, int addAmount)
 {
 	auto holdPtr = std::make_shared<HoldItem>(name, description, buffMultiplier);
 	_holdItem.push_back(holdPtr);
+	if (addAmount > 1) {
+		addAmount--;
+		addHoldItem(name, description, buffMultiplier, addAmount);
+	}
 }
 
-void Character::addHoldItem(std::string name, std::string description, int healAmount)
+void Character::addHoldItem(std::string name, std::string description, int healAmount, int addAmount)
 {
 	auto holdPtr = std::make_shared<HoldItem>(name, description, healAmount);
 	_holdItem.push_back(holdPtr);
+	if (addAmount > 1) {
+		addAmount--;
+		addHoldItem(name, description, healAmount, addAmount);
+	}
 }
 
-void Character::addPokeBall(std::string name, std::string description, double captureRate)
+void Character::addPokeBall(std::string name, std::string description, double captureRate, int addAmount)
 {
 	auto ballPtr = std::make_shared<PokéBall>(name, description, captureRate);
 	_pokeBall.push_back(ballPtr);
+	if (addAmount > 1) {
+		addAmount--;
+		addPokeBall(name, description, captureRate, addAmount);
+	}
 }
 
-void Character::addRecoveryItem(std::string name, std::string description, int healAmount)
+void Character::addRecoveryItem(std::string name, std::string description, int healAmount, int addAmount)
 {
 	auto recovPtr = std::make_shared<RecoveryItem>(name, description, healAmount);
 	_recoveryItem.push_back(recovPtr);
+	if (addAmount > 1) {
+		addAmount--;
+		addRecoveryItem(name, description, healAmount, addAmount);
+	}
 }
 
 void Character::AddPokemon(std::string name, int basehp, int baseatk, int basedef, int basespd, int level, std::string type)
@@ -73,7 +97,9 @@ std::string Character::DisplayCharacterInfo()
 std::string Character::ViewBerry()
 {
 	std::string output = "Berries:\n";
-	//come back to this
+	for (auto berry : _berry) {
+		output += berry->getName() + "\n";
+	}
 	return output;
 }
 
@@ -118,9 +144,13 @@ void Character::gainPokedollar(int dollar)
 	_pokédollar += dollar;
 }
 
-void Character::losePokedollar(int dollar)
+void Character::losePokedollar(int dollar, int loseAmount)
 {
 	_pokédollar -= dollar;
+	if (loseAmount > 1){
+		loseAmount--;
+		losePokedollar(dollar, loseAmount);
+	}
 }
 
 

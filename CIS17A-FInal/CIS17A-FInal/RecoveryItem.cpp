@@ -4,10 +4,6 @@ RecoveryItem::RecoveryItem(std::string name, std::string description, int healAm
 {
 }
 
-RecoveryItem::RecoveryItem(int healAmount) : _healAmount(healAmount)
-{
-}
-
 RecoveryItem::~RecoveryItem()
 {
 }

@@ -9,7 +9,6 @@ protected:
 	int _healAmount;
 public:
 	RecoveryItem(std::string name, std::string description, int healAmount);
-	RecoveryItem(int healAmount);
 	~RecoveryItem();
 
 	int getHealAmount() { return _healAmount; }

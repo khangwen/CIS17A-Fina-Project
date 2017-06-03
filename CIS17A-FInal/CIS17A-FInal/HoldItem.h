@@ -10,7 +10,6 @@ private:
 public:
 	HoldItem(std::string name, std::string description, double buffMultiplier);
 	HoldItem(std::string name, std::string description, int healAmount);
-	HoldItem(double buffMultiplier);
 
 	int getHealAmount() { return _healAmount; }
 	double getBuffAmount() { return _buffMultiplier; }

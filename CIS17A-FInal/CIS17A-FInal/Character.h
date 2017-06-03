@@ -24,12 +24,12 @@ private:
 public:
 	Character(std::string name);
 
-	void addBerry(std::string name, std::string description, int healAmount, double buffMultiplier);
-	void addPotion(std::string name, std::string description, int healAmount);
-	void addHoldItem(std::string name, std::string description, double buffMultiplier);
-	void addHoldItem(std::string name, std::string description, int healAmount);
-	void addPokeBall(std::string name, std::string description, double captureRate);
-	void addRecoveryItem(std::string name, std::string description, int healAmount);
+	void addBerry(std::string name, std::string description, int healAmount, double buffMultiplier, int addAmount);
+	void addPotion(std::string name, std::string description, int healAmount, int addAmount);
+	void addHoldItem(std::string name, std::string description, double buffMultiplier, int addAmount);
+	void addHoldItem(std::string name, std::string description, int healAmount, int addAmount);
+	void addPokeBall(std::string name, std::string description, double captureRate, int addAmount);
+	void addRecoveryItem(std::string name, std::string description, int healAmount, int addAmount);
 
 	void AddPokemon(std::string name, int basehp, int baseatk, int basedef, int basespd, int level, std::string type);
 	void AddMove(std::string pokename, std::string name, std::string type, int basepower);
@@ -46,7 +46,7 @@ public:
 	std::string ViewRecovery();
 
 	void gainPokedollar(int dollar);
-	void losePokedollar(int dollar);
+	void losePokedollar(int dollar, int loseAmount);
 
 	~Character();
 };
