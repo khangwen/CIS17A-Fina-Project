@@ -6,8 +6,6 @@
 
 using namespace std;
 
-//void AddItem();
-
 void ViewInventory(shared_ptr<Character>);
 void UseItem(shared_ptr<Character>);
 void BuyItem(shared_ptr<Character>);
@@ -16,7 +14,6 @@ void UsePotion(shared_ptr<Character>);
 void UseHoldItem(shared_ptr<Character>);
 void UsePokeBall(shared_ptr<Character>);
 void UseRecovery(shared_ptr<Character>);
-
 
 int main() {
 	cout << "Hello there! Welcome to the world of Pokemon!!" << endl;
@@ -133,10 +130,6 @@ void UseItem(shared_ptr<Character> character)
 
 	cout << "What item?" << endl;
 	cout << "1) Berry" << endl;
-	cout << "2) Potion" << endl;
-	cout << "3) Hold Item" << endl;
-	cout << "4) PokeBall" << endl;
-	cout << "5) Recovery Item" << endl;
 
 	int choice = -1;
 	cin >> choice;
@@ -181,7 +174,7 @@ void BuyItem(shared_ptr<Character> character)
 
 		switch (choice)
 		{
-		case 1: character->addBerry("Sitrus Berry", "heal", 30, 1.5, number);
+		case 1: character->addBerry("Sitrus", "heal", 30, 1.5, number);
 			character->losePokedollar(50, number);break;
 		case 2: character->addPotion("Regular Potion", "heal", 50, number);
 			character->losePokedollar(50, number);break;
@@ -201,10 +194,13 @@ void BuyItem(shared_ptr<Character> character)
 void UseBerry(shared_ptr<Character> character)
 {
 	cout << "What berry? " << endl;
+	cout << character->ViewBerry() << endl;
 	string berry;
+	cin.ignore();
+
 	getline(cin, berry);
 
-
+	cout << character->UseBerry(berry);
 }
 
 void UsePotion(shared_ptr<Character> character)

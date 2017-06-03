@@ -4,7 +4,7 @@ HoldItem::HoldItem(std::string name, std::string description, double buffMultipl
 {
 }
 
-HoldItem::HoldItem(std::string name, std::string description, int healAmount) : Item(name, description), _healAmount(healAmount)
+HoldItem::HoldItem(std::string name, std::string description, int healAmount) : Item(name, description, healAmount)
 {
 }
 

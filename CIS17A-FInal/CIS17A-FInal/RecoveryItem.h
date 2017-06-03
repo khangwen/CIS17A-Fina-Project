@@ -5,13 +5,11 @@
 class RecoveryItem :
 	public virtual Item
 {
-protected:
-	int _healAmount;
 public:
 	RecoveryItem(std::string name, std::string description, int healAmount);
 	~RecoveryItem();
 
-	int getHealAmount() { return _healAmount; }
-	//
+	
+	virtual std::string UseItem() { return "Used Recover\n"; }
 };
 
