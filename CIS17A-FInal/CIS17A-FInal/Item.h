@@ -14,5 +14,7 @@ public:
 
 	std::string getName() {	return _name; }
 	std::string getDescription() { return _description; }
+
+	virtual std::string UseItem() { return "Item used"; }
 };
 

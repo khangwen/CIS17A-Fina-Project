@@ -49,15 +49,68 @@ void Character::AddPokemon(std::string name, int basehp, int baseatk, int basede
 void Character::AddMove(std::string pokename, std::string name, std::string type, int basepower)
 {
 	for (auto pokemon : _pokemon) {
-		if (pokemon->getName() == pokename) {
+		if (pokemon->GetName() == pokename) {
 			pokemon->addMove(name, type, basepower);
 		}
 	}
 }
 
-std::string Character::GetName()
+std::string Character::ListPokemon()
 {
-	return _name;
+	std::string output = "Party:\n";
+	for (auto pokemon : _pokemon){
+		output += pokemon->GetName() + "\n";
+	}
+	return output;
+}
+
+std::string Character::DisplayCharacterInfo()
+{
+	std::string output = "Character Name: " + GetName() + "\n" + "PokeDollars: " + std::to_string(GetDollars()) + "\n\n";
+	return output;
+}
+
+std::string Character::ViewBerry()
+{
+	std::string output = "Berries:\n";
+	//come back to this
+	return output;
+}
+
+std::string Character::ViewPotion()
+{
+	std::string output = "Potion:\n";
+	for (auto potion : _potion) {
+		output += potion->getName() + "\n";
+	}
+	return output;
+}
+
+std::string Character::ViewHoldItem()
+{
+	std::string output = "Hold Items:\n";
+	for (auto holditem : _holdItem) {
+		output += holditem->getName() + "\n";
+	}
+	return output;
+}
+
+std::string Character::ViewPokeBall()
+{
+	std::string output = "PokeBalls:\n";
+	for (auto pokeball : _pokeBall) {
+		output += pokeball->getName() + "\n";
+	}
+	return output;
+}
+
+std::string Character::ViewRecovery()
+{
+	std::string output = "Recovery:\n";
+	for (auto recovery : _recoveryItem) {
+		output += recovery->getName() + "\n";
+	}
+	return output;
 }
 
 void Character::gainPokedollar(int dollar)

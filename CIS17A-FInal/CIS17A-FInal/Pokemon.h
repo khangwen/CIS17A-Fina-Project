@@ -18,7 +18,7 @@ private:
 public:
 	Pokemon(std::string name,int basehp, int baseatk, int basedef, int basespd, int level, std::string type);
 
-	std::string getName() { return _name; }
+	std::string GetName() { return _name; }
 	void addMove(std::string name, std::string type, int basepower);
 	~Pokemon();
 };

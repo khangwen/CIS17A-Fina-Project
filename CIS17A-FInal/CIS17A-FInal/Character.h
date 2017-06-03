@@ -33,7 +33,17 @@ public:
 
 	void AddPokemon(std::string name, int basehp, int baseatk, int basedef, int basespd, int level, std::string type);
 	void AddMove(std::string pokename, std::string name, std::string type, int basepower);
-	std::string GetName();
+	std::string GetName() { return _name; }
+	int GetDollars() { return _pokédollar; }
+	//std::string UseBerry();
+	//add other use
+	std::string ListPokemon();
+	std::string DisplayCharacterInfo();
+	std::string ViewBerry();
+	std::string ViewPotion();
+	std::string ViewHoldItem();
+	std::string ViewPokeBall();
+	std::string ViewRecovery();
 
 	void gainPokedollar(int dollar);
 	void losePokedollar(int dollar);
